@@ -71,7 +71,15 @@ public class Frame extends JFrame{
 		Convertion = new JButton("Convert");
 		Convertion.setBounds(95,245,100,25);
 		this.add(Convertion);
-		
-		
+
+		//JTextField Error automatically the error pop if the String is input
+		AmountInput.addKeyListener(new KeyAdapter(){
+			public void keyTyped(keyEvent e){
+				if(!Character.isDigit(e.getKeyChar())){
+					JOptionPane.showMessageDialog(null, "Error: Integers Only.", "String not allowed.", JOptionPane.ERROR_MESSAGE);
+					e.consume();
+				}
+			}
+		});
 	}
 }
