@@ -5,7 +5,7 @@ import java.awt.Font;
 import javax.swing.*;
 import javax.swing.JTextField;
 
-public class Frame extends JFrame{
+public class MoneyConverter extends JFrame{
 	
 	JLabel SystemTitle, AmountLabel, ConvFrom, ConvTo;
 	JTextField AmountInput;
@@ -16,7 +16,7 @@ public class Frame extends JFrame{
 	double PHP = 57.91;
 	
 	String Currencies [] = {"Select Currency" , "USD" , "PHP"};	
-	public Frame() {
+	public MoneyConverter() {
 		this.setTitle("MoneyConverter");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(400,400);
